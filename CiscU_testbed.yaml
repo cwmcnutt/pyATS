@@ -1,0 +1,52 @@
+testbed:
+  name: my_testbed
+  credentials:
+    default:
+      username: cisco
+      password: cisco
+    enable:
+      password: '%ASK{}'
+devices:
+  R1:
+    connections:
+      cli:
+        ip: 172.21.1.21
+        port: 22
+        protocol: ssh
+    os: iosxe
+    type: iosxe
+  R2:
+    connections:
+      cli:
+        ip: 172.21.1.22
+        port: 22
+        protocol: ssh
+    os: iosxe
+    type: iosxe
+  R3:
+    connections:
+      cli:
+        ip: 172.21.1.23
+        port: 22
+        protocol: ssh
+    os: iosxe
+    type: iosxe
+topology:
+  R1:
+    interfaces:
+      GigabitEthernet1:
+        ipv4: 172.21.1.21/24
+        link: n1
+        type: ethernet
+  R2:
+    interfaces:
+      GigabitEthernet1:
+        ipv4: 172.21.1.22/24
+        link: n1
+        type: ethernet
+  R3:
+    interfaces:
+      GigabitEthernet1:
+        ipv4: 172.21.1.23/24
+        link: n1
+        type: ethernet

@@ -1,0 +1,6 @@
+docker run -it ciscotestautomation/pyats:latest /bin/bash
+
+The pyATS virtual environment is sourced automatically, and your workspace is preset to be /pyats. 
+Note that this workspace directory (virtual environment) is declared to be a docker volume, so its content will persist between container reloads.
+
+To get out of the container, try CTRL-D.
